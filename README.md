@@ -25,3 +25,6 @@ nvidia-smi
 ```
 
 ## Install CUDA Drivers
+At the time of writing this blog **CUDA 10** for Ubuntu 18.04 is available. However, since the latest Tensorflow version (1.10) is not stable with CUDA 10, I will be using **CUDA 9.0 with CUDADNN 7.4.1**. Kindly use the latest stable version of CUDA and cuDNN available at the time of install.
+
+You can download and install the latest CUDA_VERSION.run file from https://developer.nvidia.com/cuda-toolkit
