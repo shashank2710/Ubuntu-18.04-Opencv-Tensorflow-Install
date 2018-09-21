@@ -33,11 +33,28 @@ cd Downloads/
 sudo sh cuda_9.0.176_384.81_linux.run --override --silent --toolkit
 ```
 
-You can download and install the latest cuDNN_VERSION file from https://developer.nvidia.com/cudnn. After you login with your NVIDIA developer credentials, kindly download the linux version of the cuDNN version since cuDNN 7.4 for Ubuntu 18.04 is not yet available . After downoading, go the Downloads directory and install cuDNN using the following command:
+You can download and install the latest cuDNN_VERSION file from https://developer.nvidia.com/cudnn. After you login with your NVIDIA developer credentials, kindly download the linux version of the cuDNN version since cuDNN 7.4 for Ubuntu 18.04 is not yet available . After downloading, go the *Downloads* directory and install cuDNN using the following command:
 ```
 tar -xzvf cudnn-9.0-linux-x64-v7.1.tgz 
 sudo cp cuda/include/cudnn.h /usr/local/cuda/include
 sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
 sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
 ```
-
+Open /.bashrc script
+```
+gedit ~/.bashrc
+```
+Add the following path to the end of your /.bashrc script
+```
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64:/usr/local/cuda/extras/CUPTI/lib64"
+export CUDA_HOME=/usr/local/cuda
+```
+Refresh and reload terminal config
+```
+source ~/.bashrc
+sudo ldconfig
+```
+Check for correct installation using the following command
+```
+echo $CUDA_HOME
+```
