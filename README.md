@@ -1,6 +1,11 @@
 # Ubuntu-18.04-with-Opencv-and-Tensorflow
 
-
+## Update Ubuntu
+```
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y autoremove
+```
 ## Install Required Libraries
 ```
 sudo apt-get install openjdk-8-jdk git python3-dev python3-numpy python3-six build-essential python3-pip swig python3-wheel libcurl3-dev libcupti-dev
@@ -58,3 +63,4 @@ Check for correct installation using the following command
 ```
 echo $CUDA_HOME
 ```
+## Install OpenCV
