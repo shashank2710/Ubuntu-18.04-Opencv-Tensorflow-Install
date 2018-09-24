@@ -68,3 +68,43 @@ Check for correct installation using the following command
 echo $CUDA_HOME
 ```
 ## Install OpenCV
+### Install Cmake
+```
+sudo apt-get install build-essential cmake
+```
+### Download OpenCV
+For this tutorial, we will be using **OpenCV 3.4**
+```
+git clone https://github.com/opencv/opencv.git
+cd opencv
+git checkout 3.4
+cd ..
+```
+### Download OpenCV Contrib
+```
+git clone https://github.com/opencv/opencv_contrib.git
+cd opencv_contrib
+git checkout 3.4
+cd ..
+
+```
+### Configure and Generate Make File
+```
+cd opencv
+mkdir build
+cd build
+```
+* Remove the live WITH_CUDA=ON if you do not have a GPU*
+```
+cmake -D CMAKE_BUILD_TYPE=RELEASE \
+      -D CMAKE_INSTALL_PREFIX=/usr/local \
+      -D WITH_QT=ON \
+      -D WITH_OPENGL=ON \
+      -D WITH_TBB=ON \
+      -D WITH_GDAL=ON \
+      -D WITH_CUDA+ON \
+      -D BUILD_EXAMPLES=ON ..
+```
+
+
+
