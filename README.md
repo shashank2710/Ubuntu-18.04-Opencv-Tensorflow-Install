@@ -81,17 +81,10 @@ sudo apt-get install -y qt5-default libvtk6-dev
 For this tutorial, we will be using **OpenCV 3.4** (whoch currently exists in the Master Branch)
 ```
 git clone https://github.com/opencv/opencv.git
-cd opencv
-git checkout 3.4
-cd ..
 ```
 ### Download OpenCV Contrib
 ```
 git clone https://github.com/opencv/opencv_contrib.git
-cd opencv_contrib
-git checkout 3.4
-cd ..
-
 ```
 ### Configure and Generate Make File
 ```
