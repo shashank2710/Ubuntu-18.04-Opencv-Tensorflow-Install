@@ -78,7 +78,7 @@ sudo apt-get install build-essential cmake
 sudo apt-get install -y qt5-default libvtk6-dev
 ```
 ### Download OpenCV
-For this tutorial, we will be using **OpenCV 3.4**
+For this tutorial, we will be using **OpenCV 3.4** (whoch currently exists in the Master Branch)
 ```
 git clone https://github.com/opencv/opencv.git
 cd opencv
