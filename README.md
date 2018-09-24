@@ -2,9 +2,9 @@
 
 ## Update Ubuntu
 ```
-sudo apt-get -y update
-sudo apt-get -y upgrade
-sudo apt-get -y autoremove
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get autoremove
 ```
 ## Install Required Libraries
 ```
@@ -75,7 +75,7 @@ sudo apt-get install build-essential cmake
 ### Additional Dependencies
 
 ```
-sudo apt-get install -y qt5-default libvtk6-dev
+sudo apt-get install qt5-default libvtk6-dev
 ```
 ### Download OpenCV
 For this tutorial, we will be using **OpenCV 3.4.3**
