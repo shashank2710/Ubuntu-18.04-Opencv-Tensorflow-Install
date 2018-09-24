@@ -146,8 +146,33 @@ You can choose the appropriate command to install PyTorch
 ## Check Your Installation
 If you have installed  everything correctly until this point, your output must look similar to this
 
-
-
-
-
-
+## Install Tensorflow (C++) with Bazel
+### Install gcc and g++
+Ubuntu 18.04 comes with built-in gcc and g++. If you are using an older version of Ubuntu, then install gcc and g++ using the following commands
+```
+sudo apt-get install gcc g++
+```
+### Install Bazel
+```
+sudo apt install curl
+echo "deb [arch=amd64] http://storage.googleapis.com/bazel-apt stable jdk1.8" | sudo tee /etc/apt/sources.list.d/bazel.list
+curl https://bazel.build/bazel-release.pub.gpg | sudo apt-key add -
+sudo apt-get update
+sudo apt-get install bazel
+sudo apt-get upgrade bazel
+```
+### Download Tensorflow
+For this tutorial we use Tensorflow 1.10. 
+```
+git clone https://github.com/tensorflow/tensorflow
+cd tensorflow
+git checkout r1.10
+```
+### Create Configuration File
+```
+./configure
+```
+### Build Tensorflow with Bazel
+```
+bazel build --jobs=6 --verbose_failures -c opt --copt=-mavx --copt=-mfpmath=both --copt=-msse4.2 //tensorflow:libtensorflow_cc.so
+```
