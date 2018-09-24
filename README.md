@@ -72,6 +72,11 @@ echo $CUDA_HOME
 ```
 sudo apt-get install build-essential cmake
 ```
+### Additional Dependencies
+
+```
+sudo apt-get install -y qt5-default libvtk6-dev
+```
 ### Download OpenCV
 For this tutorial, we will be using **OpenCV 3.4**
 ```
@@ -102,9 +107,48 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D WITH_OPENGL=ON \
       -D WITH_TBB=ON \
       -D WITH_GDAL=ON \
-      -D WITH_CUDA+ON \
-      -D BUILD_EXAMPLES=ON ..
+      -D BUILD_EXAMPLES=ON 
+      -D WITH_CUDA=ON ..
 ```
+
+```
+make -j4
+sudo make install
+sudo ldconfig
+```
+## Install Tensorflow with Python3 (And GPU support)
+### Install Dependencies
+```
+pip3 install numpy scipy matplotlib scikit-image scikit-learn ipython protobuf jupyter
+
+```
+### Install Tensorflow (CPU)
+```
+pip3 install tensorflow
+```
+### Install Tensorflow (GPU - Optional)
+```
+pip3 install tensorflow-gpu 
+```
+### Install Dependencies
+Install Theano, Keras and Dlib
+```
+pip3 install Theano 
+pip3 install keras
+pip3 install dlib
+```
+*Installing PyTorch*
+The following command must redirect you to the official PyTorch Website. 
+```
+pip3 install pytorch
+```
+You can choose the appropriate command to install PyTorch
+
+## Check Your Installation
+If you have installed  everything correctly until this point, your output must look similar to this
+
+
+
 
 
 
