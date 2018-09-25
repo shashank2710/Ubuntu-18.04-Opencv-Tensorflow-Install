@@ -118,7 +118,7 @@ sudo ldconfig
 ## Install Tensorflow with Python3 (And GPU support)
 ### Install Dependencies
 ```
-pip3 install numpy scipy matplotlib scikit-image scikit-learn ipython protobuf jupyter
+pip3 install numpy scipy matplotlib scikit-image scikit-learn ipython protobuf jupyter pandas
 
 ```
 ### Install Tensorflow (CPU)
