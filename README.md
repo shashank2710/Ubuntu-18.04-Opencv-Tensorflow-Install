@@ -1,4 +1,5 @@
 # Ubuntu-18.04-with-Opencv-and-Tensorflow
+This tutorial walks you through installing OpenCV and Tensorflow (Python and C++) with/without CUDA support in Ubuntu-18.04. 
 
 ## Update Ubuntu
 ```
@@ -10,7 +11,7 @@ sudo apt-get autoremove
 ```
 sudo apt-get install openjdk-8-jdk git python3-dev python3-numpy python3-six build-essential python3-pip swig python3-wheel libcurl3-dev libcupti-dev
 ```
-## Install Nvidia Drivers
+## Install Nvidia Drivers For GPU
 *You may skip this step if you do not have a GPU*
 
 Add graphics to your source list. Then update and upgarde
