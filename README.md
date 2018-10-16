@@ -99,7 +99,7 @@ cd opencv
 mkdir build
 cd build
 ```
-*Remove the live WITH_CUDA=ON if you do not have a GPU*
+*Remove the line WITH_CUDA=ON if you do not have a GPU*
 ```
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D CMAKE_INSTALL_PREFIX=/usr/local \
