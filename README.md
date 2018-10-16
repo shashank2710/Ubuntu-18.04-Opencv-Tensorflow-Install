@@ -112,6 +112,11 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 
 *For Compiling OpenCV with CUDA support*
 
+Create this symbolic link before cmake
+```
+sudo ln -sf /usr/lib/x86_64-linux-gnu/libGL.so.1 /usr/lib/x86_64-linux-gnu/libGL.so
+```
+
 ```
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D CMAKE_INSTALL_PREFIX=/usr/local \
