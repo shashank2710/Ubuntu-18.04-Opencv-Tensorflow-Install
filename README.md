@@ -107,7 +107,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D WITH_OPENGL=ON \
       -D WITH_TBB=ON \
       -D WITH_GDAL=ON \
-      -D BUILD_EXAMPLES=ON 
+      -D BUILD_EXAMPLES=ON \
       -D WITH_CUDA=ON ..
 ```
 
