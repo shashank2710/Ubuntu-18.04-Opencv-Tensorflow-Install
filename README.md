@@ -99,7 +99,7 @@ cd opencv
 mkdir build
 cd build
 ```
-*Remove the line WITH_CUDA=ON if you do not have a GPU*
+*For Compiling OpenCV without CUDA support*
 ```
 cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D CMAKE_INSTALL_PREFIX=/usr/local \
@@ -107,8 +107,26 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
       -D WITH_OPENGL=ON \
       -D WITH_TBB=ON \
       -D WITH_GDAL=ON \
-      -D BUILD_EXAMPLES=ON \
-      -D WITH_CUDA=ON ..
+      -D BUILD_EXAMPLES=ON..
+```
+
+*For Compiling OpenCV with CUDA support*
+
+```
+cmake -D CMAKE_BUILD_TYPE=RELEASE \
+-D CMAKE_INSTALL_PREFIX=/usr/local \
+-D FORCE_VTK=ON \
+-D WITH_TBB=ON \
+-D WITH_V4L=ON \
+-D WITH_QT=ON \
+-D WITH_OPENGL=ON \
+-D WITH_CUBLAS=ON \
+-D CUDA_NVCC_FLAGS="-D_FORCE_INLINES" \
+-D WITH_GDAL=ON \
+-D WITH_XINE=ON \
+-D WITH_CUDA=ON\
+-D BUILD_EXAMPLES=ON ..
+
 ```
 
 ```
