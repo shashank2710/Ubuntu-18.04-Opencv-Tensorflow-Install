@@ -206,3 +206,7 @@ bazel build --jobs=6 --verbose_failures -c opt --copt=-mavx --copt=-mfpmath=both
 ```
 bazel build -c opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-mfpmath=both --copt=-msse4.2 --config=cuda --verbose_failures //tensorflow:libtensorflow_cc.so
 ```
+
+```
+bazel build -c opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-mfpmath=both --copt=-msse4.2 --config=cuda --verbose_failures //tensorflow/tools/pip_package:build_pip_package
+```
