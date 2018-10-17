@@ -197,6 +197,12 @@ git checkout r1.10
 ./configure
 ```
 ### Build Tensorflow with Bazel
+*Install Bazel with C++ without CUDA Support*
 ```
 bazel build --jobs=6 --verbose_failures -c opt --copt=-mavx --copt=-mfpmath=both --copt=-msse4.2 //tensorflow:libtensorflow_cc.so
+```
+
+*Install Bazel with C++ with CUDA Support*
+```
+bazel build -c opt --copt=-mavx --copt=-mavx2 --copt=-mfma --copt=-mfpmath=both --copt=-msse4.2 --config=cuda --verbose_failures //tensorflow:libtensorflow_cc.so
 ```
